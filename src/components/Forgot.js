@@ -13,9 +13,9 @@ import {
     Button
 } from 'reactstrap';
 
-const Login = () => {
+const Forgot = () => {
     useClass('bg-blue');
-    const handleLogin = () => {
+    const handleSendEmail = () => {
         console.log('Make HTTP Request here...');
     }
     return(
@@ -26,19 +26,16 @@ const Login = () => {
                         <Card>
                             <CardBody>
                                 <Form>
-                                    <h1>Login</h1>
-                                    <p>Enter your e-mail and password to access. New? <Link to="/register">Sign up!</Link></p>
+                                    <h1>Forgot Password</h1>
+                                    <p>Enter your e-mail and you will receive a link to reset your password.</p>
                                     <hr />
                                     <InputGroup className="mb-3">
                                         <Input type="email" placeholder="E-mail" />
                                     </InputGroup>
-                                    <InputGroup className="mb-3">
-                                        <Input type="password" placeholder="Password" />
-                                    </InputGroup>
                                     <InputGroup>
-                                        <Button onClick={handleLogin} outline color="primary">Login</Button>
-                                        <Link to="/forgot">
-                                            <Button onClick={handleLogin} color="link">Forgot Password</Button>
+                                        <Button onClick={handleSendEmail} outline color="primary">Ok!</Button>
+                                        <Link to="/login">
+                                            <Button color="link">Back to Login</Button>
                                         </Link> 
                                     </InputGroup>
                                 </Form>
@@ -51,4 +48,4 @@ const Login = () => {
     );
 }
 
-export default Login;
+export default Forgot;

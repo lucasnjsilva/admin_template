@@ -13,9 +13,9 @@ import {
     Button
 } from 'reactstrap';
 
-const Login = () => {
+const Register = () => {
     useClass('bg-blue');
-    const handleLogin = () => {
+    const handleCreate = () => {
         console.log('Make HTTP Request here...');
     }
     return(
@@ -26,9 +26,12 @@ const Login = () => {
                         <Card>
                             <CardBody>
                                 <Form>
-                                    <h1>Login</h1>
-                                    <p>Enter your e-mail and password to access. New? <Link to="/register">Sign up!</Link></p>
+                                    <h1>New account</h1>
+                                    <p>Enter your name, e-mail and password to create a account. Already registered? <Link to="/register">Login</Link></p>
                                     <hr />
+                                    <InputGroup className="mb-3">
+                                        <Input type="text" placeholder="Name" />
+                                    </InputGroup>
                                     <InputGroup className="mb-3">
                                         <Input type="email" placeholder="E-mail" />
                                     </InputGroup>
@@ -36,10 +39,7 @@ const Login = () => {
                                         <Input type="password" placeholder="Password" />
                                     </InputGroup>
                                     <InputGroup>
-                                        <Button onClick={handleLogin} outline color="primary">Login</Button>
-                                        <Link to="/forgot">
-                                            <Button onClick={handleLogin} color="link">Forgot Password</Button>
-                                        </Link> 
+                                        <Button onClick={handleCreate} outline color="primary">Register</Button>
                                     </InputGroup>
                                 </Form>
                             </CardBody>                                
@@ -51,4 +51,4 @@ const Login = () => {
     );
 }
 
-export default Login;
+export default Register;

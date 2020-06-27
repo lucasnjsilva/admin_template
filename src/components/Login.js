@@ -13,7 +13,7 @@ import {
     Button
 } from 'reactstrap';
 
-const Login = () => {
+const Login = (props) => {
     useClass('bg-blue');
     const handleLogin = () => {
         console.log('Make HTTP Request here...');

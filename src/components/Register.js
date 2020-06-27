@@ -13,7 +13,7 @@ import {
     Button
 } from 'reactstrap';
 
-const Register = () => {
+const Register = (props) => {
     useClass('bg-blue');
     const handleCreate = () => {
         console.log('Make HTTP Request here...');

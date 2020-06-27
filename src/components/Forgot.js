@@ -13,7 +13,7 @@ import {
     Button
 } from 'reactstrap';
 
-const Forgot = () => {
+const Forgot = (props) => {
     useClass('bg-blue');
     const handleSendEmail = () => {
         console.log('Make HTTP Request here...');

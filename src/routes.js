@@ -9,15 +9,15 @@ import Error404 from './components/Error404';
 const Routes = () => (
     <BrowserRouter>
         <Switch>
-            <Route exact path="/" name="Home" render={props => <AppLayout {...props} />} />
             <Route exact path="/login" name="Login" render={props => <Login {...props} />} />
             <Route exact path="/forgot" name="Forgot" render={props => <Forgot {...props} />} />
             <Route exact path="/register" name="Register" render={props => <Register {...props} />} />
+            <Route path="/" name="Home" render={props => <AppLayout {...props} />} />
 
             {/* Error 404 route. */}                
             <Route path="*" name="Error404" render={props => <Error404 {...props} />} />
         </Switch>
-  </BrowserRouter>
+    </BrowserRouter>
 );
 
 export default Routes;

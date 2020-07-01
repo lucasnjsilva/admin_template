@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Templates from './LoadingRoutes';
+import Templates from './DynamicRoutes';
 import Header from './../components/Header';
 import Sidebar from './../components/Sidebar';
 

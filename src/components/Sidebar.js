@@ -1,4 +1,5 @@
 import React from 'react';
+import Templates from './../containers/DynamicRoutes';
 
 export default function Sidebar(props) {
     return (
@@ -7,7 +8,12 @@ export default function Sidebar(props) {
                 <h2>School of Net</h2>
             </div>
             <div className="list-group">
-                <a href="#1" className="list-group-item"> Link </a>
+                <a href="/" className="list-group-item"> Home </a>
+                { 
+                    Templates.map((template, index) => (
+                        <a href={template.path} className="list-group-item"> {template.name} </a>
+                    ))
+                }
             </div>
         </aside>
     );
